@@ -7,8 +7,6 @@ import geocoder
 root = tk.Tk()
 root.title("Weather App")
 
-# Create and place widgets within the window
-
 # Create labels
 label_location = tk.Label(root, text="Your Location: ")
 label_weather = tk.Label(root, text="Weather: ")
