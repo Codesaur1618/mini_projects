@@ -24,7 +24,7 @@ def fetch_weather():
         latitude, longitude = user_location.latlng
 
         # Replace "YOUR_API_KEY" with your actual OpenWeatherMap API key
-        api_key = "2bcdb3630a4c3f164f927f1bd0703965"
+        api_key = "YOUR_API_KEY"
         base_url = "https://api.openweathermap.org/data/2.5/weather"
         params = {
             "lat": latitude,
