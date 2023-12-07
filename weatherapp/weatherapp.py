@@ -3,28 +3,26 @@ import requests
 import json
 import geocoder
 
-# Create the main application window
+
 root = tk.Tk()
 root.title("Weather App")
 
-# Create and place widgets within the window
 
-# Create labels
+
+
 label_location = tk.Label(root, text="Your Location: ")
 label_weather = tk.Label(root, text="Weather: ")
 label_temperature = tk.Label(root, text="Temperature: ")
 label_humidity = tk.Label(root, text="Humidity: ")
 label_wind = tk.Label(root, text="Wind Speed: ")
 
-# Create a function to fetch weather data based on the user's location
 def fetch_weather():
     try:
-        # Detect the user's location based on IP address
         user_location = geocoder.ip('me')
         latitude, longitude = user_location.latlng
 
         # Replace "YOUR_API_KEY" with your actual OpenWeatherMap API key
-        api_key = "2bcdb3630a4c3f164f927f1bd0703965"
+        api_key = "YOUR_API_KEY"
         base_url = "https://api.openweathermap.org/data/2.5/weather"
         params = {
             "lat": latitude,
@@ -61,10 +59,10 @@ def fetch_weather():
         label_humidity.config(text="")
         label_wind.config(text="")
 
-# Create a button to trigger weather data retrieval
+
 button_fetch = tk.Button(root, text="Get Weather", command=fetch_weather)
 
-# Place widgets in the window
+
 label_location.pack()
 label_weather.pack()
 label_temperature.pack()
@@ -72,5 +70,5 @@ label_humidity.pack()
 label_wind.pack()
 button_fetch.pack()
 
-# Start the main GUI loop
+
 root.mainloop()
