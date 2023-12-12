@@ -8,8 +8,6 @@ root = tk.Tk()
 root.title("Weather App")
 
 
-
-
 label_location = tk.Label(root, text="Your Location: ")
 label_weather = tk.Label(root, text="Weather: ")
 label_temperature = tk.Label(root, text="Temperature: ")
